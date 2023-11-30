@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let soundPlayer = SoundPlayer()
+    private let soundPlayer = SoundPlayer()
 
     var body: some View {
         ZStack {

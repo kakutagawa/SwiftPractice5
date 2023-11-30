@@ -9,11 +9,11 @@ import UIKit
 import AVFoundation
 
 final class SoundPlayer: NSObject {
-    let cymbalData = NSDataAsset(name: "cymbalSound")?.data
-    var cymbalPlayer: AVAudioPlayer?
+    private let cymbalData = NSDataAsset(name: "cymbalSound")?.data
+    private var cymbalPlayer: AVAudioPlayer?
 
-    let guitarData = NSDataAsset(name: "guitarSound")?.data
-    var guitarPlayer: AVAudioPlayer?
+    private let guitarData = NSDataAsset(name: "guitarSound")?.data
+    private var guitarPlayer: AVAudioPlayer?
 
     func cymbalPlay() {
         do {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Janken:String, CaseIterable {
+enum Janken: String, CaseIterable {
     case gu
     case choki
     case pa

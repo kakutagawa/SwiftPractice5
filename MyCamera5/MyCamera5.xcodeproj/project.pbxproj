@@ -15,6 +15,7 @@
 		1D8F36762B1C208F003B99E7 /* MyCamera5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F36752B1C208F003B99E7 /* MyCamera5UITests.swift */; };
 		1D8F36782B1C208F003B99E7 /* MyCamera5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F36772B1C208F003B99E7 /* MyCamera5UITestsLaunchTests.swift */; };
 		1D8F36852B1C20EF003B99E7 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F36842B1C20EF003B99E7 /* ImagePickerView.swift */; };
+		1D8F36872B1D41DE003B99E7 /* EffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F36862B1D41DE003B99E7 /* EffectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		1D8F36752B1C208F003B99E7 /* MyCamera5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCamera5UITests.swift; sourceTree = "<group>"; };
 		1D8F36772B1C208F003B99E7 /* MyCamera5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCamera5UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1D8F36842B1C20EF003B99E7 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		1D8F36862B1D41DE003B99E7 /* EffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				1D8F365A2B1C208C003B99E7 /* MyCamera5App.swift */,
 				1D8F365C2B1C208C003B99E7 /* ContentView.swift */,
+				1D8F36862B1D41DE003B99E7 /* EffectView.swift */,
 				1D8F36842B1C20EF003B99E7 /* ImagePickerView.swift */,
 				1D8F365E2B1C208E003B99E7 /* Assets.xcassets */,
 				1D8F36602B1C208E003B99E7 /* Preview Content */,
@@ -263,6 +266,7 @@
 				1D8F365D2B1C208C003B99E7 /* ContentView.swift in Sources */,
 				1D8F36852B1C20EF003B99E7 /* ImagePickerView.swift in Sources */,
 				1D8F365B2B1C208C003B99E7 /* MyCamera5App.swift in Sources */,
+				1D8F36872B1D41DE003B99E7 /* EffectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

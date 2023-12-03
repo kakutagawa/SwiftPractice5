@@ -9,24 +9,18 @@ import SwiftUI
 import PhotosUI
 
 struct ContentView: View {
-    @State var captureImage: UIImage? = nil
-    @State var isShowSheet = false
-    @State var photoPickerSelectedImage: PhotosPickerItem? = nil
+    @State private var captureImage: UIImage? = nil
+    @State private var isShowSheet = false
+    @State private var photoPickerSelectedImage: PhotosPickerItem? = nil
 
     var body: some View {
         VStack {
             Spacer()
-            if let captureImage {
-                Image(uiImage: captureImage)
-                    .resizable()
-                    .scaledToFit()
-            }
-
-            Spacer()
             Button {
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     print("カメラは利用できます")
-                        isShowSheet.toggle()
+                    captureImage = nil
+                    isShowSheet.toggle()
                 } else {
                     print("カメラは利用できません")
                 }
@@ -40,7 +34,11 @@ struct ContentView: View {
             }
             .padding()
             .sheet(isPresented: $isShowSheet) {
-                ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                if let captureImage {
+                    EffectView(isShowSheet: $isShowSheet, captureImage: captureImage)
+                } else {
+                    ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                }
             }
 
             PhotosPicker(selection: $photoPickerSelectedImage, matching: .images, preferredItemEncoding: .automatic, photoLibrary: .shared()) {
@@ -58,6 +56,7 @@ struct ContentView: View {
                         switch result {
                         case .success(let data):
                             if let data {
+                                captureImage = nil
                                 captureImage = UIImage(data: data)
                             }
                         case .failure:
@@ -66,17 +65,10 @@ struct ContentView: View {
                     }
                 }
             }
-
-            if let captureImage,
-               let shareImage = Image(uiImage: captureImage) {
-                ShareLink(item: shareImage, subject: nil, message: nil, preview: SharePreview("photo", image: shareImage)) {
-                    Text("SNSに投稿する")
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .multilineTextAlignment(.center)
-                        .background(.blue)
-                        .foregroundColor(.white)
-                }
+        }
+        .onChange(of: captureImage) { _, image in
+            if let _ = image {
+                isShowSheet.toggle()
             }
         }
     }

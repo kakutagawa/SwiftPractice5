@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var okashiDataList = OkashiData()
-    @State var inputText = ""
+    @StateObject private var okashiDataList = OkashiData()
+    @State private var inputText = ""
+    @State private var showSafari = false
 
     var body: some View {
         VStack {
@@ -21,18 +22,29 @@ struct ContentView: View {
                 .padding()
 
             List(okashiDataList.okashiList) { okashi in
-                HStack {
-                    AsyncImage(url: okashi.image) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(height: 40)
-                    } placeholder: {
-                         ProgressView()
+                Button {
+                    okashiDataList.okashiLink = okashi.link
+                    showSafari.toggle()
+                } label: {
+                    HStack {
+                        AsyncImage(url: okashi.image) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 40)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        Text(okashi.name)
                     }
-                    Text(okashi.name)
                 }
             }
+            .sheet(isPresented: $showSafari, content: {
+                if let url = okashiDataList.okashiLink {
+                    SafariView(url: url)
+                        .ignoresSafeArea()
+                }
+            })
         }
     }
 }

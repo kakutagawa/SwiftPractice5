@@ -15,6 +15,7 @@
 		1D8F36B02B1E10FC003B99E7 /* MyOkashi5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F36AF2B1E10FC003B99E7 /* MyOkashi5UITests.swift */; };
 		1D8F36B22B1E10FC003B99E7 /* MyOkashi5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F36B12B1E10FC003B99E7 /* MyOkashi5UITestsLaunchTests.swift */; };
 		1D8F36BF2B1E1132003B99E7 /* OkashiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F36BE2B1E1132003B99E7 /* OkashiData.swift */; };
+		1D8F36C12B1E94AB003B99E7 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8F36C02B1E94AB003B99E7 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		1D8F36AF2B1E10FC003B99E7 /* MyOkashi5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOkashi5UITests.swift; sourceTree = "<group>"; };
 		1D8F36B12B1E10FC003B99E7 /* MyOkashi5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOkashi5UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1D8F36BE2B1E1132003B99E7 /* OkashiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkashiData.swift; sourceTree = "<group>"; };
+		1D8F36C02B1E94AB003B99E7 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				1D8F36942B1E10FA003B99E7 /* MyOkashi5App.swift */,
 				1D8F36962B1E10FA003B99E7 /* ContentView.swift */,
+				1D8F36C02B1E94AB003B99E7 /* SafariView.swift */,
 				1D8F36BE2B1E1132003B99E7 /* OkashiData.swift */,
 				1D8F36982B1E10FC003B99E7 /* Assets.xcassets */,
 				1D8F369A2B1E10FC003B99E7 /* Preview Content */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8F36C12B1E94AB003B99E7 /* SafariView.swift in Sources */,
 				1D8F36972B1E10FA003B99E7 /* ContentView.swift in Sources */,
 				1D8F36BF2B1E1132003B99E7 /* OkashiData.swift in Sources */,
 				1D8F36952B1E10FA003B99E7 /* MyOkashi5App.swift in Sources */,

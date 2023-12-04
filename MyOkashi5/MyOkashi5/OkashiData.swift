@@ -14,7 +14,7 @@ struct OkashiItem: Identifiable {
     let image: URL
 }
 
-class OkashiData: ObservableObject {
+final class OkashiData: ObservableObject {
     struct ResultJson: Codable {
         struct Item: Codable {
             let name: String?
@@ -25,6 +25,7 @@ class OkashiData: ObservableObject {
     }
 
     @Published var okashiList: [OkashiItem] = []
+    var okashiLink: URL?
 
     func searchOkashi(keyword: String) {
         print("searchOkashiメソッドで受け取った値：\(keyword)")

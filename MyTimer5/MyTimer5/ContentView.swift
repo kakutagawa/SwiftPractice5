@@ -37,9 +37,7 @@ struct ContentView: View {
 
                         Button {
                             if let unwrapedTimerHandler = timerHandler {
-                                if unwrapedTimerHandler.isValid == true {
-                                    unwrapedTimerHandler.invalidate()
-                                }
+                                unwrapedTimerHandler.invalidate()
                             }
                         } label: {
                             Text("ストップ")
@@ -75,7 +73,7 @@ struct ContentView: View {
         }
     }
 
-    func countDownTimer() {
+    private func countDownTimer() {
         count += 1
 
         if timerValue - count <= 0 {
@@ -85,13 +83,10 @@ struct ContentView: View {
         }
     }
 
-    func startTimer() {
-        if let unwrapedTimerHandler = timerHandler {
-            if unwrapedTimerHandler.isValid == true {
+    private func startTimer() {
+        guard let unwrapedTimerHandler = timerHandler else {
                 return
-            }
         }
-
         if timerValue - count <= 0 {
             count = 0
         }
